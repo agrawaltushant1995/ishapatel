@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Advisory</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="animate__animated animate__fadeIn animate__delay-1s>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#calculators">Calculators</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Homepage Section -->
+	<!-- Homepage Section -->
+	<section id="home" class="homepage-section">
+		<div class="homepage-content">
+			<h1>Welcome to Our Financial Advisory Service</h1>
+			<p>Providing expert financial advice to help you make informed decisions.</p>
+		</div>
+		<div class="homepage-image">
+			<img src="banner.png" alt="Financial Advisory" />
+		</div>
+	</section>
+
+    <!-- Calculators Section -->
+    <section id="calculators" class="calculator-row animate__animated animate__fadeInUp animate__delay-0.5s">
+        <!-- Loan Calculator Column -->
+        <div class="column animate__animated animate__fadeInUp animate__delay-1s">
+            <h2>Loan Calculator</h2>
+            <form id="loanForm">
+                <label for="loanAmount">Loan Amount ($):</label>
+                <input type="number" id="loanAmount" required>
+                <label for="interestRate">Interest Rate (% per year):</label>
+                <input type="number" id="interestRate" required>
+                <label for="loanTerm">Loan Term (Years):</label>
+                <input type="number" id="loanTerm" required>
+                <button type="button" onclick="calculateLoan()">Calculate</button>
+            </form>
+            <div id="loanResult"></div>
+        </div>
+
+        <!-- Interest Calculator Column -->
+        <div class="column animate__animated animate__fadeInUp animate__delay-1.5s">
+            <h2>Interest Calculator</h2>
+            <form id="interestForm">
+                <label for="principalAmount">Principal ($):</label>
+                <input type="number" id="principalAmount" required>
+                <label for="interestRateCalc">Interest Rate (% per year):</label>
+                <input type="number" id="interestRateCalc" required>
+                <label for="compoundingFreq">Compounding Frequency:</label>
+                <select id="compoundingFreq">
+                    <option value="1">Annually</option>
+                    <option value="2">Semi-annually</option>
+                    <option value="4">Quarterly</option>
+                    <option value="12">Monthly</option>
+                </select>
+                <label for="timePeriod">Time Period (Years):</label>
+                <input type="number" id="timePeriod" required>
+                <button type="button" onclick="calculateInterest()">Calculate</button>
+            </form>
+            <div id="interestResult"></div>
+        </div>
+
+        <!-- Savings Goal Calculator Column -->
+        <div class="column animate__animated animate__fadeInUp animate__delay-2s">
+            <h2>Savings Goal Calculator</h2>
+            <form id="savingsForm">
+                <label for="goalAmount">Savings Goal ($):</label>
+                <input type="number" id="goalAmount" required>
+                <label for="monthlyContribution">Monthly Contribution ($):</label>
+                <input type="number" id="monthlyContribution" required>
+                <label for="goalRate">Annual Interest Rate (%):</label>
+                <input type="number" id="goalRate" required>
+                <label for="goalTime">Years to Save:</label>
+                <input type="number" id="goalTime" required>
+                <button type="button" onclick="calculateSavingsGoal()">Calculate</button>
+            </form>
+            <div id="savingsResult"></div>
+        </div>
+    </section>
+
+    <!-- Contact Section for Free Consultation -->
+    <section id="contact" class=="canimate__animated animate__fadeInUp animate__delay-2.5s">
+        <h2>Book a Free Consultation</h2>
+        <form id="consultationForm">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" required pattern="[0-9]{10}" title="Please enter a valid 10-digit phone number">
+            <textarea id="comments" placeholder="Any comments or questions?" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+	
+	<!-- Footer Section -->
+	<footer>
+		<p>&copy; 2024 Isha Patel. All rights reserved.</p>
+	</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

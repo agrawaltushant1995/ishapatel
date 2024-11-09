@@ -1,0 +1,195 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Navigation Bar Styles */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none; /* Remove the bullets */
+    display: flex;    /* Make the nav items align horizontally */
+    justify-content: center; /* Center the items horizontally */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+nav ul li {
+    margin: 0 15px; /* Add horizontal spacing between the items */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px; /* Add some padding around the text for better clickability */
+    display: block; /* Ensure the link takes up the full space of the li */
+    transition: background-color 0.3s, transform 0.2s; /* For hover effects */
+}
+
+nav ul li a:hover {
+    background-color: #444; /* Change the background color on hover */
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Homepage Section */
+.homepage-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    border-bottom: 2px solid #ccc;
+}
+
+/* Text content for the homepage */
+.homepage-content {
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+
+.homepage-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.homepage-content p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Image for the homepage */
+.homepage-image {
+    flex: 1;
+    max-width: 45%;
+    padding: 20px;
+}
+
+.homepage-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+section {
+    padding: 50px 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: auto;
+}
+
+label, input, select, textarea {
+    margin-bottom: 15px;
+}
+
+input, select, textarea {
+    padding: 10px;
+    font-size: 1rem;
+}
+
+button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* Results */
+#loanResult, #interestResult, #savingsResult {
+    margin-top: 20px;
+    padding: 10px;
+    font-weight: bold;
+    color: #333;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Calculator Row and Columns */
+.calculator-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 50px 20px;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px;
+    max-width: 30%;
+    margin: 0 10px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+	text-align: center;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+/* Responsive Design for Banner and Columns */
+@media (max-width: 768px) {
+    .homepage-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .homepage-content,
+    .homepage-image {
+        max-width: 100%;
+    }
+	
+	.column {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+}
